@@ -5,7 +5,7 @@
     "homepage": "https://github.com/creativetimofficial/argon-dashboard",
     "keywords": ["Laravel", "Preset", "Argon"],
     "require": {
-        "laravel/framework": "5.5"
+        "laravel/framework": "^5.5"
     },
     "autoload": {
         "psr-4": {
