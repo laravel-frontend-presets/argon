@@ -132,7 +132,7 @@ Please see the [changelog](changelog.md) for more information on what has change
 
 ## License
 
-The MIT License (MIT).
+[MIT License](https://github.com/laravel-frontend-presets/argon/blob/master/license.md).
 
 ## Screen shots
 
