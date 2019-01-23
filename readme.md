@@ -23,15 +23,16 @@ After initializing a fresh instance of Laravel (and making all the necessary con
 
 ### By using the archive
 
-1. In your application's root create a presets folder
-2. Paste the files from the archive in it
-3. Open `composer.json` file 
-4. Add `"LaravelFrontendPresets\\ArgonPreset\\": "presets/LaravelFrontendPresets/ArgonPreset/src"` to `autoload/psr-4` and to `autoload-dev/psr-4`
-5. Add `LaravelFrontendPresets\ArgonPreset\ArgonPresetServiceProvider::class` to `config/app.php` file
-6. In your terminal run `composer dump-autoload`
-7. Run `php artisan preset argon` command to install the Argon preset. This will install all the necessary assets and also the custom auth views, it will also add the auth route in `routes/web.php`
+1. In your application's root create a **presets** folder
+2. [Download an archive](https://github.com/laravel-frontend-presets/argon/archive/master.zip) of the repo and unzip it
+3. Copy and paste **argon-master** folder in presets (created in step 2) and rename it to **argon**
+4. Open `composer.json` file 
+5. Add `"LaravelFrontendPresets\\ArgonPreset\\": "presets/argon/src"` to `autoload/psr-4` and to `autoload-dev/psr-4`
+6. Add `LaravelFrontendPresets\ArgonPreset\ArgonPresetServiceProvider::class` to `config/app.php` file
+7. In your terminal run `composer dump-autoload`
+8. Run `php artisan preset argon` command to install the Argon preset. This will install all the necessary assets and also the custom auth views, it will also add the auth route in `routes/web.php`
 (NOTE: If you run this command several times, be sure to clean up the duplicate Auth entries in routes/web.php)
-8. Run `php artisan migrate --seed` to create basic users table
+9. Run `php artisan migrate --seed` to create basic users table
 
 
 ## Usage
