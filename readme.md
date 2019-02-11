@@ -117,7 +117,7 @@ All the sample code for the user management can be found in `App\Http\Controller
 ```
 public function store(UserRequest $request, User $model)
 {
-    $model->create($request->merge(['password' => bcrypt($request->get('password'))])->all());
+    $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
 
     return redirect()->route('user.index')->withStatus(__('User successfully created.'));
 }
