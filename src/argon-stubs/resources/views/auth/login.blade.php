@@ -2,7 +2,7 @@
 
 @section('content')
     @include('layouts.headers.guest')
-    
+
     <div class="container mt--8 pb-5">
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-7">
@@ -22,8 +22,11 @@
                     </div>
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
-                            <small>{{ __('Or sign in with credentials') }}</small><br>
-                            <small>You can use <strong>admin@argon.com</strong> and <strong>secret</strong> to loggin</small>
+                            <small>
+                                    Create new account OR Sign in with these credentials:
+                                    <br>
+                                    Username <strong>admin@argon.com</strong> Password: <strong>secret</strong>
+                            </small>
                         </div>
                         <form role="form" method="POST" action="{{ route('login') }}">
                             @csrf
