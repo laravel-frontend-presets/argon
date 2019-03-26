@@ -2,7 +2,7 @@
 
 Argon Frontend Preset For Laravel Framework 5.5 and Up
 
-*Current version*: Argon v1.0.0. More info at https://github.com/creativetimofficial/argon-dashboard.
+*Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
 ## Note
 
@@ -117,7 +117,7 @@ All the sample code for the user management can be found in `App\Http\Controller
 ```
 public function store(UserRequest $request, User $model)
 {
-    $model->create($request->merge(['password' => bcrypt($request->get('password'))])->all());
+    $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
 
     return redirect()->route('user.index')->withStatus(__('User successfully created.'));
 }
