@@ -10,7 +10,7 @@ We recommend installing this preset on a project that you are starting from scra
 
 ## Prerequisites
 
-If you don't already have an Apache local environment, use one of the following links:
+If you don't already have an Apache local environment with PHP and MySQL, use one of the following links:
 
  - Windows: http://tutorial.razi.net.my/search?q=uwamp
  - Linux: https://howtoubuntu.org/how-to-install-lamp-on-ubuntu
