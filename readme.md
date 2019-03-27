@@ -16,7 +16,7 @@ If you don't already have an Apache local environment, use one of the following 
  - Linux: https://howtoubuntu.org/how-to-install-lamp-on-ubuntu
  - Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/
 
-Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md
+Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md   
 And Laravel: https://laravel.com/docs/5.8/installation
 
 ## Installation
