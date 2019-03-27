@@ -4,6 +4,16 @@ Argon Frontend Preset For Laravel Framework 5.5 and Up
 
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
+## Prerequisites
+
+If you don't already have an Apache local environment with PHP and MySQL, use one of the following links:
+
+- Windows: http://tutorial.razi.net.my/search?q=uwamp
+- Linux: https://howtoubuntu.org/how-to-install-lamp-on-ubuntu
+- Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac
+
+You will also need to install Composer: https://getcomposer.org/doc/00-intro.md
+
 ## Note
 
 We recommend installing this preset on a project that you are starting from scratch, otherwise your project's design might break.
@@ -14,7 +24,7 @@ After initializing a fresh instance of Laravel (and making all the necessary con
 
 ### Via composer
 
-1. `Cd` to your Laravel app
+1. `Cd` to your Laravel app  
 2. Install this preset via `composer require laravel-frontend-presets/argon`. No need to register the service provider. Laravel 5.5 & up can auto detect the package.
 3. Run `php artisan preset argon` command to install the Argon preset. This will install all the necessary assets and also the custom auth views, it will also add the auth route in `routes/web.php`
 (NOTE: If you run this command several times, be sure to clean up the duplicate Auth entries in routes/web.php)
