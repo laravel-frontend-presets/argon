@@ -77,9 +77,9 @@ Also you shouldn't worry about entering wrong data in the inputs when editing th
 public function rules()
 {
     return [
-        'old_password' => ['required', 'min:6', new CurrentPasswordCheckRule],
-        'password' => ['required', 'min:6', 'confirmed', 'different:old_password'],
-        'password_confirmation' => ['required', 'min:6'],
+        'old_password' => ['required', 'min:8', new CurrentPasswordCheckRule],
+        'password' => ['required', 'min:8', 'confirmed', 'different:old_password'],
+        'password_confirmation' => ['required', 'min:8'],
     ];
 }
 ```
@@ -115,7 +115,7 @@ public function rules()
             'required', 'email', Rule::unique((new User)->getTable())->ignore($this->route()->user->id ?? null)
         ],
         'password' => [
-            $this->route()->user ? 'nullable' : 'required', 'confirmed', 'min:6'
+            $this->route()->user ? 'nullable' : 'required', 'confirmed', 'min:8'
         ]
     ];
 }
