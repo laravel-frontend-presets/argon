@@ -18,3 +18,7 @@ All notable changes to `Argon` frontend preset for Laravel will be documented in
 
 ## Version 1.0.7 - 1.0.10
   - Menu structure changes, replace texts
+  
+## Version 1.0.11 - 2019-09-23
+  - Update to Laravel 6.x
+
