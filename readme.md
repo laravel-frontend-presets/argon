@@ -4,6 +4,8 @@ Argon Frontend Preset For Laravel Framework 5.5 and Up
 
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
+![Product Image](https://s3.amazonaws.com/creativetim_bucket/products/140/original/opt_ad_laravel_thumbnail.jpg?1548334671)
+
 ## Note
 
 We recommend installing this preset on a project that you are starting from scratch, otherwise your project's design might break.
