@@ -1,8 +1,10 @@
 # Argon Frontend Preset For Laravel Framework 5.5 and Up
 
-Argon Frontend Preset For Laravel Framework 5.5 and Up
+![version](https://img.shields.io/badge/version-1.0.12-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/laravel-frontend-presets/argon.svg?maxAge=2592000)](https://github.com/laravel-frontend-presets/argon/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/laravel-frontend-presets/argon.svg?maxAge=2592000)](https://github.com/laravel-frontend-presets/argon/issues?q=is%3Aissue+is%3Aclosed)
 
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
+
+![Product Image](https://s3.amazonaws.com/creativetim_bucket/products/140/original/opt_ad_laravel_thumbnail.jpg?1548334671)
 
 ## Note
 
@@ -17,7 +19,7 @@ If you don't already have an Apache local environment with PHP and MySQL, use on
  - Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/
 
 Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md   
-And Laravel: https://laravel.com/docs/5.8/installation
+And Laravel: https://laravel.com/docs/6.x/installation
 
 ## Installation
 
