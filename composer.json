@@ -2,7 +2,7 @@
     "name": "laravel-frontend-presets/argon",
     "description": "Laravel 5.x Front-end preset for argon",
     "license": "MIT",
-    "homepage": "https://github.com/creativetimofficial/argon-dashboard",
+    "homepage": "https://github.com/creativetimofficial/argon-dashboard-laravel",
     "keywords": ["Laravel", "Preset", "Argon"],
     "require": {
         "laravel/framework": "^5.5 || ^6.0"
