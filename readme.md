@@ -99,7 +99,7 @@ Please see the [changelog](changelog.md) for more information on what has change
 
 [MIT License](https://github.com/laravel-frontend-presets/argon/blob/master/license.md).
 
-## Screen shots
+## Screen shots    
 
 ![Argon Login](/screens/Login.png)
 
