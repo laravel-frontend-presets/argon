@@ -17,8 +17,9 @@
     <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 <body class="clickup-chrome-ext_installed">
-                <form id="logout-form" action="http://test-verif.test/logout" method="POST" style="display: none;">
-            <input type="hidden" name="_token" value="dw9iKZr8s3pHxk0NGyEcW3RpXHgoFtIgNF23hlM8">            </form>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
         <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
 <div class="container-fluid">
     <!-- Toggler -->
@@ -26,8 +27,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Brand -->
-    <a class="navbar-brand pt-0" href="http://test-verif.test/home">
-        <img src="http://test-verif.test/argon/img/brand/blue.png" class="navbar-brand-img" alt="...">
+    <a class="navbar-brand pt-0" href="{{ route('home') }}">
+        <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
     </a>
     <!-- User -->
     <ul class="nav align-items-center d-md-none">
