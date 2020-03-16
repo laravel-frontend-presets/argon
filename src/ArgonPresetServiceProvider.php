@@ -4,6 +4,8 @@ namespace LaravelFrontendPresets\ArgonPreset;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
+use Laravel\Ui\UiCommand;
+use Laravel\Ui\AuthCommand;
 
 class ArgonPresetServiceProvider extends ServiceProvider
 {
@@ -14,7 +16,7 @@ class ArgonPresetServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        PresetCommand::macro('argon', function ($command) {
+        UiCommand::macro('argon', function ($command) {
             ArgonPreset::install();
             
             $command->info('Argon scaffolding installed successfully.');
