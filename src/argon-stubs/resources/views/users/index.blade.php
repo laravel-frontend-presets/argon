@@ -185,12 +185,21 @@
                   <i class="ni ni-bullet-list-67 text-default"></i>
                   <span class="nav-link-text">Tables</span>
                 </a>
+<<<<<<< HEAD
               </li>
             <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
                 <a class="nav-link text-white" href="{{route('upgrade')}}">
                     <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
                 </a>
             </li>
+=======
+            </li>
+                           <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
+                    <a class="nav-link text-white" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
+                        <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
+                    </a>
+                </li>
+>>>>>>> eb7186b6a79559baac814003cdcfe77840ef8fc4
         </ul>
         <!-- Divider -->
         <hr class="my-3">
