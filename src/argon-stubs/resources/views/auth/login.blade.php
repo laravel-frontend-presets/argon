@@ -23,12 +23,9 @@
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
                             <small>
-                                <a href="{{ route('register') }}">{{ __('Create new account') }}</a> {{ __('OR Sign in with these credentials:') }}
-                            </small>
-                            <br>
-                            <small>
-                                {{ __('Username') }} <strong>admin@argon.com</strong>
-                                {{ __('Password') }} <strong>secret</strong>
+                                    Create new account OR Sign in with these credentials:
+                                    <br>
+                                    Username <strong>admin@argon.com</strong> Password: <strong>secret</strong>
                             </small>
                         </div>
                         <form role="form" method="POST" action="{{ route('login') }}">
