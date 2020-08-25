@@ -47,7 +47,8 @@ class ArgonPreset extends Preset
      */
     protected static function updateAssets()
     {
-        static::copyDirectory('resources/assets', public_path('argon'));
+        static::copyDirectory('resources/assets', public_path('assets'));
+static::copyDirectory('resources/argon', public_path('argon'));
     }
 
     /**
@@ -129,13 +130,14 @@ class ArgonPreset extends Preset
         // Add routes
         file_put_contents(
             './routes/web.php', 
-            "Route::group(['middleware' => 'auth'], function () {\n\tRoute::resource('user', 'UserController', ['except' => ['show']]);\n\tRoute::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);\n\tRoute::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);\n\tRoute::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);\n});\n\n", 
+            "Route::group(['middleware' => 'auth'], function () {\n\tRoute::resource('user', 'UserController', ['except' => ['show']]);\n\tRoute::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);\n\tRoute::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);\n\tRoute::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); \n\t Route::get('map', function () {return view('pages.maps');})->name('map');\n\t Route::get('icons', function () {return view('pages.icons');})->name('icons'); \n\t Route::get('table-list', function () {return view('pages.tables');})->name('table');\n\tRoute::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);\n});\n\n", 
             FILE_APPEND
         );
 
         // Copy views
         static::copyDirectory('resources/views/users', resource_path('views/users'));
         static::copyDirectory('resources/views/profile', resource_path('views/profile'));
+        static::copyDirectory('resources/views/pages', resource_path('views/pages'));
     }
 
     /**

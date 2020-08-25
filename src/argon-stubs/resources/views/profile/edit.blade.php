@@ -69,7 +69,7 @@
                 <div class="card bg-secondary shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
-                            <h3 class="col-12 mb-0">{{ __('Edit Profile') }}</h3>
+                            <h3 class="mb-0">{{ __('Edit Profile') }}</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -87,6 +87,7 @@
                                     </button>
                                 </div>
                             @endif
+
 
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
