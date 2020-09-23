@@ -24,4 +24,7 @@ All notable changes to `Argon` frontend preset for Laravel will be documented in
   
 ## Version 1.1.0 - 2020-03-18
   - Update to Laravel 7.x
+  
+## Version 1.1.1 - 2020-09-23
+  - Update to Laravel 8.x
 
