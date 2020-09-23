@@ -103,7 +103,7 @@ static::copyDirectory('resources/argon', public_path('argon'));
         // Add Auth routes in 'routes/web.php'
         file_put_contents(
             './routes/web.php', 
-            "Auth::routes();\n\nRoute::get('/home', 'HomeController@index')->name('home');\n\n", 
+            "Auth::routes();\n\nRoute::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');\n\n", 
             FILE_APPEND
         );
         
@@ -120,7 +120,7 @@ static::copyDirectory('resources/argon', public_path('argon'));
     public static function addUserManagement()
     {
         // Add seeder, controllers, requests and rules
-        static::copyDirectory('database/seeds', app_path('../database/seeds'));
+        static::copyDirectory('database/seeds', app_path('../database/seeders'));
                
         static::copyFile('app/Http/Controllers/UserController.php', app_path('Http/Controllers/UserController.php'));
         static::copyFile('app/Http/Controllers/ProfileController.php', app_path('Http/Controllers/ProfileController.php'));
@@ -130,7 +130,7 @@ static::copyDirectory('resources/argon', public_path('argon'));
         // Add routes
         file_put_contents(
             './routes/web.php', 
-            "Route::group(['middleware' => 'auth'], function () {\n\tRoute::resource('user', 'UserController', ['except' => ['show']]);\n\tRoute::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);\n\tRoute::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);\n\tRoute::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); \n\t Route::get('map', function () {return view('pages.maps');})->name('map');\n\t Route::get('icons', function () {return view('pages.icons');})->name('icons'); \n\t Route::get('table-list', function () {return view('pages.tables');})->name('table');\n\tRoute::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);\n});\n\n", 
+            "Route::group(['middleware' => 'auth'], function () {\n\tRoute::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);\n\tRoute::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);\n\tRoute::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);\n\tRoute::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); \n\t Route::get('map', function () {return view('pages.maps');})->name('map');\n\t Route::get('icons', function () {return view('pages.icons');})->name('icons'); \n\t Route::get('table-list', function () {return view('pages.tables');})->name('table');\n\tRoute::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);\n});\n\n", 
             FILE_APPEND
         );
 
