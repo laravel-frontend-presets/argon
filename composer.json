@@ -1,6 +1,6 @@
 {
     "name": "laravel-frontend-presets/argon",
-    "description": "Laravel 7.x Front-end preset for argon",
+    "description": "Laravel 8.x Front-end preset for argon",
     "license": "MIT",
     "homepage": "https://github.com/creativetimofficial/argon-dashboard-laravel",
     "keywords": ["Laravel", "Preset", "Argon"],
