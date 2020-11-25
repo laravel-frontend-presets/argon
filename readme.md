@@ -5,7 +5,7 @@
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
 
-![Product Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-laravel/intro.gif)
+![Product Image](/screens/video.gif)
 
 ## Note
 
