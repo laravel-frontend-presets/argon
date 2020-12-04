@@ -4,7 +4,8 @@
 
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
-![Product Image](https://s3.amazonaws.com/creativetim_bucket/products/140/original/opt_ad_laravel_thumbnail.jpg?1548334671)
+
+![Product Image](/screens/video.gif)
 
 ## Note
 
@@ -19,7 +20,7 @@ If you don't already have an Apache local environment with PHP and MySQL, use on
  - Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/
 
 Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md   
-And Laravel: https://laravel.com/docs/7.x/installation
+And Laravel: https://laravel.com/docs/8.x/installation
 
 ## Installation
 
@@ -88,9 +89,68 @@ public function rules()
 }
 ```
 
+## Documentation
+The documentation for the Material Dashboard Laravel is hosted at our [website](https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html?_ga=2.29287036.1564880607.1605870409-618833345.1605870409).
+
+## Browser Support
+
+At present, we officially aim to support the last two versions of the following browsers:
+
+<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
+
+- Demo: <https://argon-dashboard-laravel.creative-tim.com/?ref=mdlp-readme>
+- Download Page: <https://www.creative-tim.com/product/argon-dashboard-laravel?ref=mdl-readme>
+- Documentation: <https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html?_ga=2.29287036.1564880607.1605870409-618833345.1605870409>
+- License Agreement: <https://www.creative-tim.com/license>
+- Support: <https://www.creative-tim.com/contact-us>
+- Issues: [Github Issues Page](https://github.com/laravel-frontend-presets/argon-dashboard/issues)
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
+
+## Reporting Issues
+
+We use GitHub Issues as the official bug tracker for the Material Dashboard Laravel. Here are some advices for our users that want to report an issue:
+
+1. Make sure that you are using the latest version of the Material Dashboard Laravel. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=mdl-readme).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+
+## Useful Links
+
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
+- [Blog Creative Tim](http://blog.creative-tim.com/)
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=mdl-readme) from Creative Tim
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=mdl-readme) from Creative Tim
+- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=mdl-readme) from Creative Tim
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=mdl-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=mdl-readme) from Creative Tim
+- Check our Bundles [here](https://www.creative-tim.com/bundles??ref=mdl-readme)
+
+### Social Media
+
+### Creative Tim:
+
+Twitter: <https://twitter.com/CreativeTim?ref=mdl-readme>
+
+Facebook: <https://www.facebook.com/CreativeTim?ref=mdl-readme>
+
+Dribbble: <https://dribbble.com/creativetim?ref=mdl-readme>
+
+Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=mdl-readme>
+
+### Updivision:
+
+Twitter: <https://twitter.com/updivision?ref=mdl-readme>
+
+Facebook: <https://www.facebook.com/updivision?ref=mdl-readme>
+
+Linkedin: <https://www.linkedin.com/company/updivision?ref=mdl-readme>
+
+Updivision Blog: <https://updivision.com/blog/?ref=mdl-readme>
 
 ## Credits
 
