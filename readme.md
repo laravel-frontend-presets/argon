@@ -106,7 +106,7 @@ public function rules()
 
 | Profile Page | Users Page |
 | --- | --- |
-| [![Profile Page](/screens/Profile.png)](https://www.creative-tim.com/live/argon-dashboard-laravel)  | [![Users Page](/screens/UserManagement.png)](https://www.creative-tim.com/live/argon-dashboard-laravel) 
+| [![Profile Page](/screens/Profile.png)](https://www.creative-tim.com/live/argon-dashboard-laravel)  | [![Users Page](/screens/Users.png)](https://www.creative-tim.com/live/argon-dashboard-laravel) 
 [View More](https://www.creative-tim.com/live/argon-dashboard-laravel)
 
 ## Documentation
