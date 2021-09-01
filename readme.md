@@ -106,8 +106,8 @@ public function rules()
 
 | Profile Page | Dashboard |
 | --- | --- |
-| [![Profile Page](/screens/Profile.png)](https://www.creative-tim.com/live/argon-dashboard-laravel)
-[View More](https://www.creative-tim.com/live/argon-dashboard-laravel)   | [![Dashboard](/screens/Dashboard.png)](https://www.creative-tim.com/live/argon-dashboard-laravel)
+| [![Profile Page](/screens/Profile.png)](https://www.creative-tim.com/live/argon-dashboard-laravel)   | [![Dashboard](/screens/Dashboard.png)](https://www.creative-tim.com/live/argon-dashboard-laravel)
+[View More](https://www.creative-tim.com/live/argon-dashboard-laravel)
 
 ## Documentation
 The documentation for the Material Dashboard Laravel is hosted at our [website](https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html).
