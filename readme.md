@@ -5,7 +5,7 @@
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
 
-<img src="/screens/video.gif" width=100% />
+<img src="/screens/video.gif" width=90% />
 
 ## Note
 
@@ -110,7 +110,7 @@ public function rules()
 [View More](https://www.creative-tim.com/live/argon-dashboard-laravel)
 
 ## Documentation
-The documentation for the Material Dashboard Laravel is hosted at our [website](https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html?_ga=2.29287036.1564880607.1605870409-618833345.1605870409).
+The documentation for the Material Dashboard Laravel is hosted at our [website](https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html
 
 ## File Structure
 ```
@@ -842,7 +842,7 @@ At present, we officially aim to support the last two versions of the following 
 
 - Demo: <https://argon-dashboard-laravel.creative-tim.com/?ref=mdlp-readme>
 - Download Page: <https://www.creative-tim.com/product/argon-dashboard-laravel?ref=mdl-readme>
-- Documentation: <https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html?_ga=2.29287036.1564880607.1605870409-618833345.1605870409>
+- Documentation: <https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/overview.html>
 - License Agreement: <https://www.creative-tim.com/license>
 - Support: <https://www.creative-tim.com/contact-us>
 - Issues: [Github Issues Page](https://github.com/laravel-frontend-presets/argon-dashboard/issues)
