@@ -5,7 +5,7 @@
 *Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
 
-<img src="/screens/video.gif" width=90% />
+[<img src="/screens/Dashboard.png" width="100%" />](https://www.creative-tim.com/live/argon-dashboard-laravel)
 
 ## Note
 
