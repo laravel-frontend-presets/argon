@@ -1,8 +1,8 @@
-# Argon Frontend Preset For Laravel Framework 8.x and Up
+# Argon Frontend Preset For Laravel Framework 9.x and Up
 
 ![version](https://img.shields.io/badge/version-1.0.12-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/laravel-frontend-presets/argon.svg?maxAge=2592000)](https://github.com/laravel-frontend-presets/argon/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/laravel-frontend-presets/argon.svg?maxAge=2592000)](https://github.com/laravel-frontend-presets/argon/issues?q=is%3Aissue+is%3Aclosed)
 
-*Current version*: Argon v1.0.10. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
+*Current version*: Argon v1.1.2. More info at https://www.creative-tim.com/product/argon-dashboard-laravel.
 
 
 <img src="/screens/video.gif" width=90% />
@@ -20,7 +20,7 @@ If you don't already have an Apache local environment with PHP and MySQL, use on
  - Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/
 
 Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md   
-And Laravel: https://laravel.com/docs/8.x/installation
+And Laravel: https://laravel.com/docs/9.x/installation
 
 ## Installation
 
@@ -30,7 +30,7 @@ After initializing a fresh instance of Laravel (and making all the necessary con
 
 1. `Cd` to your Laravel app  
 2. Type in your terminal: `composer require laravel/ui` and `php artisan ui vue --auth`
-3. Install this preset via `composer require laravel-frontend-presets/argon`. No need to register the service provider. Laravel 8.x & up can auto detect the package.
+3. Install this preset via `composer require laravel-frontend-presets/argon`. No need to register the service provider. Laravel 9.x & up can auto detect the package.
 4. Run `php artisan ui argon` command to install the Argon preset. This will install all the necessary assets and also the custom auth views, it will also add the auth route in `routes/web.php`
 (NOTE: If you run this command several times, be sure to clean up the duplicate Auth entries in routes/web.php)
 5. In your terminal run `composer dump-autoload`

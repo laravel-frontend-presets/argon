@@ -1,11 +1,11 @@
 {
     "name": "laravel-frontend-presets/argon",
-    "description": "Laravel 8.x Front-end preset for argon",
+    "description": "Laravel 9.x Front-end preset for argon",
     "license": "MIT",
     "homepage": "https://github.com/creativetimofficial/argon-dashboard-laravel",
     "keywords": ["Laravel", "Preset", "Argon"],
     "require": {
-        "laravel/framework": "^8.0",
+        "laravel/framework": "^9.0",
         "laravel/legacy-factories": "^1.0"
     },
     "autoload": {
