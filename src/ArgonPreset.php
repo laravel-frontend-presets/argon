@@ -16,143 +16,15 @@ class ArgonPreset extends Preset
      */
     public static function install()
     {
-        static::updatePackages();     
         static::updateAssets();      
-        
-        static::updateWelcomePage();
         static::updateAuthViews();
+        static::updateComponents();
         static::updateLayoutViews();
-        static::updateDashboardPage();
-        
-        static::addUserManagement();
-        
-        // static::removeNodeModules();
+        static::addPages();
     }
 
     /**
-     * Update the given package array.
-     *
-     * @param  array  $packages
-     * @return array
-     */
-    protected static function updatePackageArray(array $packages)
-    {
-        return $packages;
-    }
-
-    /**
-     * Update the assets
-     *
-     * @return void
-     */
-    protected static function updateAssets()
-    {
-        static::copyDirectory('resources/assets', public_path('assets'));
-static::copyDirectory('resources/argon', public_path('argon'));
-    }
-
-    /**
-     * Update the default welcome page file.
-     *
-     * @return void
-     */
-    protected static function updateWelcomePage()
-    {
-        // remove default welcome page
-        static::deleteResource(('views/welcome.blade.php'));
-
-        // copy new one from your stubs folder
-        static::copyFile('resources/views/welcome.blade.php', resource_path('views/welcome.blade.php'));
-    }
-
-    /**
-     * Update the default dashboard page file.
-     *
-     * @return void
-     */
-    protected static function updateDashboardPage()
-    {
-        // remove default welcome page
-        static::deleteResource(('views/dashboard.blade.php'));
-
-        // copy new one from your stubs folder
-        static::copyFile('resources/views/dashboard.blade.php', resource_path('views/dashboard.blade.php'));
-    }
-
-    /**
-     * Update the default layout files
-     *
-     * @return void
-     */
-    protected static function updateLayoutViews()
-    {
-        // copy new one from your stubs folder
-        static::copyDirectory('resources/views/layouts', resource_path('views/layouts'));
-    }
-
-    /**
-     * Copy Auth view templates.
-     *
-     * @return void
-     */
-    protected static function updateAuthViews()
-    {
-        // Add Home controller
-        static::copyFile('app/Http/Controllers/HomeController.php', app_path('Http/Controllers/HomeController.php'));
-
-        // Add Auth routes in 'routes/web.php'
-        file_put_contents(
-            './routes/web.php', 
-            "Auth::routes();\n\nRoute::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');\n\n", 
-            FILE_APPEND
-        );
-        
-        // Copy argon auth views from the stubs folder
-        static::deleteResource('views/home.blade.php');
-        static::copyDirectory('resources/views/auth', resource_path('views/auth'));
-    }
-    
-    /**
-     * Copy user management and profile edit files
-     *
-     * @return void
-     */
-    public static function addUserManagement()
-    {
-        // Add seeder, controllers, requests and rules
-        static::copyDirectory('database/seeds', app_path('../database/seeders'));
-               
-        static::copyFile('app/Http/Controllers/UserController.php', app_path('Http/Controllers/UserController.php'));
-        static::copyFile('app/Http/Controllers/ProfileController.php', app_path('Http/Controllers/ProfileController.php'));
-        static::copyDirectory('app/Http/Requests', app_path('Http/Requests'));
-        static::copyDirectory('app/Rules', app_path('Rules'));
-
-        // Add routes
-        file_put_contents(
-            './routes/web.php', 
-            "Route::group(['middleware' => 'auth'], function () {\n\tRoute::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);\n\tRoute::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);\n\tRoute::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);\n\tRoute::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); \n\t Route::get('map', function () {return view('pages.maps');})->name('map');\n\t Route::get('icons', function () {return view('pages.icons');})->name('icons'); \n\t Route::get('table-list', function () {return view('pages.tables');})->name('table');\n\tRoute::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);\n});\n\n", 
-            FILE_APPEND
-        );
-
-        // Copy views
-        static::copyDirectory('resources/views/users', resource_path('views/users'));
-        static::copyDirectory('resources/views/profile', resource_path('views/profile'));
-        static::copyDirectory('resources/views/pages', resource_path('views/pages'));
-    }
-
-    /**
-     * Delete a resource
-     *
-     * @param string $resource
-     * @return void
-     */
-    private static function deleteResource($resource)
-    {
-        (new Filesystem)->delete(resource_path($resource));
-    }
-
-    /**
-     * Copy a directory
+     * Copy a file
      *
      * @param string $file
      * @param string $destination
@@ -173,5 +45,98 @@ static::copyDirectory('resources/argon', public_path('argon'));
     private static function copyDirectory($directory, $destination)
     {
         (new Filesystem)->copyDirectory(static::STUBSPATH.$directory, $destination);
+    }
+
+    /**
+     * Update the assets
+     *
+     * @return void
+     */
+    protected static function updateAssets()
+    {
+        // public folders
+        static::copyDirectory('resources/argon', public_path());
+
+        // js, scss resources that can be run with webpack mix
+        static::copyDirectory('resources/assets', app_path('../resources'));
+        static::copyFile('webpack.mix.js', app_path('../webpack.mix.js'));
+    }
+
+    /**
+     * Update the default components files
+     *
+     * @return void
+     */
+    protected static function updateComponents()
+    {
+        // copy components folder
+        static::copyDirectory('resources/views/components', resource_path('views/components'));
+    }
+
+    /**
+     * Update the default layout files
+     *
+     * @return void
+     */
+    protected static function updateLayoutViews()
+    {
+        // copy layouts folder
+        static::copyDirectory('resources/views/layouts', resource_path('views/layouts'));
+    }
+
+    /**
+     * Copy Auth view templates.
+     *
+     * @return void
+     */
+    protected static function updateAuthViews()
+    {
+        // Add auth controllers
+        static::copyFile('app/Models/User.php', app_path('Models/User.php'));
+        static::copyFile('app/Http/Controllers/HomeController.php', app_path('Http/Controllers/HomeController.php'));
+        static::copyFile('app/Http/Controllers/LoginController.php', app_path('Http/Controllers/LoginController.php'));
+        static::copyFile('app/Http/Controllers/RegisterController.php', app_path('Http/Controllers/RegisterController.php'));
+        static::copyFile('app/Http/Controllers/ChangePassword.php', app_path('Http/Controllers/ChangePassword.php'));
+        static::copyFile('app/Http/Controllers/ResetPassword.php', app_path('Http/Controllers/ResetPassword.php'));
+
+        // Add Auth routes in 'routes/web.php'
+        file_put_contents(
+            './routes/web.php', 
+            "\nuse App\Http\Controllers\HomeController;\nuse App\Http\Controllers\PageController;\nuse App\Http\Controllers\RegisterController;\nuse App\Http\Controllers\LoginController;\nuse App\Http\Controllers\UserProfileController;\nuse App\Http\Controllers\ResetPassword;\nuse App\Http\Controllers\ChangePassword;            
+            \n\nRoute::get('/', function () {return redirect('/dashboard');})->middleware('auth');\n\tRoute::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');\n\tRoute::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');\n\tRoute::get('/login', [LoginController::class, 'show'])->middleware('guest')->name('login');\n\tRoute::post('/login', [LoginController::class, 'login'])->middleware('guest')->name('login.perform');\n\tRoute::get('/reset-password', [ResetPassword::class, 'show'])->middleware('guest')->name('reset-password');\n\tRoute::post('/reset-password', [ResetPassword::class, 'send'])->middleware('guest')->name('reset.perform');\n\tRoute::get('/change-password', [ChangePassword::class, 'show'])->middleware('guest')->name('change-password');\n\tRoute::post('/change-password', [ChangePassword::class, 'update'])->middleware('guest')->name('change.perform');\n\tRoute::get('/dashboard', [HomeController::class, 'index'])->name('home')->middleware('auth');\n",
+            FILE_APPEND
+        );
+
+        // Copy argon auth views from the stubs folder
+        static::copyDirectory('resources/views/auth', resource_path('views/auth'));
+    }
+
+    /**
+     * Copy user management and profile edit files
+     *
+     * @return void
+     */
+    public static function addPages()
+    {
+        // Add seeder, controllers, requests and rules
+        // migrations shoudl be deleted
+        static::copyDirectory('migrations', app_path('../database/migrations'));
+        static::copyDirectory('database/seeders', app_path('../database/seeders'));
+
+        static::copyFile('app/Http/Controllers/PageController.php', app_path('Http/Controllers/PageController.php'));
+        static::copyFile('app/Http/Controllers/UserProfileController.php', app_path('Http/Controllers/UserProfileController.php'));
+
+        static::copyDirectory('app/View', app_path('View'));
+        static::copyDirectory('app/Notifications', app_path('Notifications'));
+
+        // Add routes
+        file_put_contents(
+            './routes/web.php', 
+            "Route::group(['middleware' => 'auth'], function () {\n\tRoute::get('/virtual-reality', [PageController::class, 'vr'])->name('virtual-reality');\n\tRoute::get('/rtl', [PageController::class, 'rtl'])->name('rtl');\n\tRoute::get('/profile', [UserProfileController::class, 'show'])->name('profile');\n\tRoute::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');\n\tRoute::get('/profile-static', [PageController::class, 'profile'])->name('profile-static'); \n\tRoute::get('/sign-in-static', [PageController::class, 'signin'])->name('sign-in-static');\n\tRoute::get('/sign-up-static', [PageController::class, 'signup'])->name('sign-up-static'); \n\tRoute::get('/{page}', [PageController::class, 'index'])->name('page');\n\tRoute::post('logout', [LoginController::class, 'logout'])->name('logout');\n});",
+            FILE_APPEND
+        );
+
+        // Copy views
+        static::copyDirectory('resources/views/pages', resource_path('views/pages'));
     }
 }
